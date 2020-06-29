@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<link rel="stylesheet" href="assets\css\main.css" />
+</head>
+<body>
+	<script>
+		
+	function _test_json() {
+		var _list = new Array();
+		var _score = [100, 80, 50, 30, 20, 15, 10, 8, 5, 1];
+		for(var i=0; i<10; i++) {
+			var _data = {
+					name : "홍길동",
+					score : _score[i]
+				};
+			_list = _list.concat(_data);
+		}
+		return _list;
+	}
+	function table() {
+		var jsondata = _test_json();
+		var col;
+		document.write('<table border="1">');
+		document.write("<tr><th>순위</th><th>이름</th><th>점수</th></tr>");
+		for (var row = 0; row < 10; row++) {
+			document.write("<tr><td>"+(row+1)+"</td>");
+			document.write("<td>"+jsondata[row].name+"</td>");
+			document.write("<td>"+jsondata[row].score+"</td>");
+			document.write("</tr>");
+		}
+		document.write("</table><p/>");
+	}
+	table();
+	</script>
+</body>
+</html>
