@@ -22,11 +22,9 @@
                     <div class="text">
                         <span id="counter">0</span>
                     </div>
-                    <svg>
-                        <!-- <circle class="bg" cx="57" cy="57" r="52" /> -->
-                        <!--  <circle class="progress" cx="57" cy="57" r="52" /> -->
-                    </svg>
+
                 </div>
+                <button class="btn btn-primary"type="button" >Submit</button>
             </div>
         </div>
         <h1>Flank Counter</h1>
@@ -88,7 +86,7 @@
             await predict();
             window.requestAnimationFrame(loop);
         }
-        var progress = 327
+ 
         var status = "up"
         var count = 0
         async function predict() {
@@ -101,11 +99,7 @@
                 if (status == "flank") {
                     count++
 
-                    progress = progress-32.7
-                    if(progress <= 0) {
-                        progress = 327-32.7
-                    }
-                    $('.progress').css('stroke-dashoffset', progress);
+                    
                     $('#counter').html(count);
                 }
                 status = "flank"
