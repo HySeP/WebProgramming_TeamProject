@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+	<head>
+		<title>운동목록</title>
+		<link rel="stylesheet" href="assets\css\main.css" />
+		<link rel="stylesheet" href="assets\css\noscript.css" />
+		<link rel="stylesheet" href="assets\css\list.css" />
+		<meta charset="utf-8" />
+    	<style>
+        	table, th, td {
+        		border: 0;
+  			}
+  			table {
+    			width: 1000px;
+    			height: 400px;
+  			}
+  			td {
+  				width : 500px;
+  				height: 400px;
+  			}
+			#Push_up {
+				background-image: url("images/push_up.jpg");
+				background-repeat: no-repeat;
+				background-size: contain;
+			}
+			#Sit_up {
+				background-image: url("images/sit_up.jpg");
+				background-repeat: no-repeat;
+				background-size: contain;
+			}
+			#Flank {
+				background-image: url("images/flank.jpg");
+				background-repeat: no-repeat;
+				background-size: contain;
+			}
+			#Squat {
+				background-image: url("images/squat.jpg");
+				background-repeat: no-repeat;
+				background-size: contain;
+			}  			
+    	</style>
+	</head>
+<body>
+	<div style="text-align:center; width:100%;">
+		<table border="1" style="margin:0 auto;">			
+			<thead>
+        	<tr>
+          		<th><a href="#" class="name" onclick="location.href='pushup.html'">팔굽혀펴기</a></th>  
+          		<th><a href="#" class="name" onclick="location.href='situp.html'">윗몸일으키기</a></th>  
+        	</tr>
+      		</thead>
+      		<tbody>
+        	<tr>
+          		<td id="Push_up"></td>
+          		<td id="Sit_up"></td>
+        	</tr>
+      		<thead>
+        	<tr>
+          		<th><a href="#" class="name" onclick="location.href='flank.html'">플랭크</a></th>  
+          		<th><a href="#" class="name" onclick="location.href='squat.html'">스쿼트</a></th>          		
+        	</tr>
+      		</thead>
+        	<tr>
+          		<td id="Flank"></td>
+          		<td id="Squat"></td>
+        	</tr>
+      		</tbody>
+    	</table>
+    </div>
+    
+    <footer id="footer">
+						<p class="copyright"> KNU WebProgramming 6Team </p>
+					</footer>
+					
+ </body>
+</html>
