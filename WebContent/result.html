@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>WORKOUT</title>
+<link rel="stylesheet" href="assets\css\main.css" />
+</head>
+<body>
+	<script src="cookie.js"></script>
+	<h1>운동 결과</h1>
+	
+	<table border="1" style="margin:0 auto;">
+      	<tr>
+       		<th>이  름</th>
+       		<td id="name"></td>
+      	</tr>
+      	<tr>
+       		<th>경과시간</th>
+       		<td id="elapsed"></td>
+      	</tr>
+      	<tr>
+       		<th>기  록</th>
+       		<td id="count"></td>
+      	</tr>
+   	</table>
+	<script>
+		var startTime = getCookie("startTime");
+		var currTime = new Date();
+		var elapsedms = 0;
+		if (startTime != undefined)
+			currTime.getTime()-startTime.getTime();
+		document.getElementById("name").innerHTML = getCookie("username");
+		document.getElementById("elapsed").innerHTML = (elapsedms*0.001)+"초";
+		document.getElementById("count").innerHTML = getCookie("count");
+	</script>
+</body>
+</html>
