@@ -2,36 +2,61 @@
 *
 */
 
-function setCookie(name, value, day) {
+function setCookie(key, value, hour) {
+	var data = {
+		key: key,
+		value: value
+	}
+	
+	var cookieJson = getCookieArray();
+	var inserted = false;
+	
+	for(var i=0; i<cookieJson.length; i++) {
+		var cookieData = cookieJson[i];
+		if (cookieData.key == key) {
+			cookieJson[i] = data;
+			inserted = true;
+		}
+	}
+	
+	if (!inserted)
+		cookieJson.push(data);
+	
 	var day = new Date();
-	// ms단위기에 1초로 변환->60초->60분->24시간->최종적으로 day
-	day.setTime(day.getTime() + (1000 * 24 * 60 * 60 * day));
-	var expires = "expires=" + day.toUTCString();
-	document.cookie = name + "=" + value + ";" + expires + ";path=/";
+	day.setTime(day.getTime() + (1000 * 3600 * day));
+	var expires = "//expires=" + day.toUTCString();
+	document.cookie = JSON.stringify(cookieJson) + expires + ";path=/";
+	
 }
-function getCookie(name) {
-	var cookieArr = document.cookie.split(";");
-	 
-	for (var i in cookieArr) {
-		if(cookieArr[i].split("=")[0].trim() == "username")
-		if (cookieArr[i][cookieArr[i].length - 1] != "=")
-			return cookieArr[i].split("=")[1];
+function getCookie(key) {
+	var cookieJson = getCookieArray();
+	var value = undefined;
+	for(var i=0; i<cookieJson.length; i++) {
+		var cookieData = cookieJson[i];
+		if (cookieData.key == key) {
+			value = cookieData.value;
+		}
 	}
-	return "";
-}
-
-function checkCookie() {
-	var user = getCookie("username");
-	if (user != "") {
-		alert("다시 오셨네요 ?? " + user + "님");
-	}
-	else {
-		user = prompt("처음오셨군요? 이름이 무엇인가요?", "예) 홍길동");
-		if (user != "" && user != null)
-			setCookie("username", user, 365);
-	}
+	return value;
 }
  
-function delCookie() {
-	document.cookie = "username =; expires = Wed; 01 Jan 1970";
+function getCookieArray() {
+	var jsonData = document.cookie.split("//expires")[0];
+	var cookieJson;
+	
+	try {
+		cookieJson = JSON.parse(jsonData);
+	} catch(err) {
+		cookieJson = [{
+			key: "test",	
+			value: 0
+		}]
+	}
+	
+	return cookieJson;
+}
+
+
+function resetCookie() {
+	document.cookie = "[] expires = Wed; 01 Jan 1970";
 }
