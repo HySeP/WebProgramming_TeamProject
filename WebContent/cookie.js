@@ -7,6 +7,7 @@ function setCookie(key, value, hour) {
 		key: key,
 		value: value
 	}
+	//alert("쿠키 준비 : "+JSON.stringify(data));
 	
 	var cookieJson = getCookieArray();
 	var inserted = false;
@@ -23,10 +24,10 @@ function setCookie(key, value, hour) {
 		cookieJson.push(data);
 	
 	var day = new Date();
-	day.setTime(day.getTime() + (1000 * 3600 * day));
-	var expires = "//expires=" + day.toUTCString();
-	document.cookie = JSON.stringify(cookieJson) + expires + ";path=/";
-	
+	day.setTime(day.getTime() + (1000 * 3600 * hour));
+	var expires = "'expires=" + day.toUTCString();
+	document.cookie = "jsondata='" + JSON.stringify(cookieJson) + expires + ";path=/";
+	//alert("쿠키 저장됨 : "+document.cookie);
 }
 function getCookie(key) {
 	var cookieJson = getCookieArray();
@@ -41,7 +42,16 @@ function getCookie(key) {
 }
  
 function getCookieArray() {
-	var jsonData = document.cookie.split("//expires")[0];
+	var jsonData = document.cookie;
+	var start = jsonData.lastIndexOf("jsondata='");
+	if (start >= 0) {
+		start += 10;
+		//alert("jsonData = "+jsonData+", start = "+start);
+		var end = jsonData.lastIndexOf("'expires=");
+		jsonData = jsonData.substring(start, end);
+		//alert("start = "+start+", end = "+end+", jsonData = "+jsonData);
+	}
+	
 	var cookieJson;
 	
 	try {
@@ -51,8 +61,8 @@ function getCookieArray() {
 			key: "test",	
 			value: 0
 		}]
+		//alert("parsing error");
 	}
-	
 	return cookieJson;
 }
 
