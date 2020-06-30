@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/earlyaccess/notosanskr.css">
+    <link rel="stylesheet" href="assets\css\main.css" />
+	<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
     <title>KnuFit</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -25,11 +27,13 @@
                     </div>
                     
                 </div>
-                <button class="btn btn-primary"type="button" onclick="sendCount()">Submit</button>
+                <button type="button" onclick="sendCount()">Submit</button>
             </div>
         </div>
         <h1>Lunge Counter</h1>
-        <button class="btn btn-primary"type="button" onclick="init()" >Start</button>
+        <div>측면을 향한 자세를 취해주세요 </div>
+        <p></p>
+        <button type="button" onclick="init()" >Start</button>
         <div><canvas id="canvas"></canvas></div>
         <div id="label-container"></div>
     </div>
