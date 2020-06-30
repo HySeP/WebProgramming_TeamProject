@@ -52,26 +52,23 @@
 
 
 #box {
-    width:1500px;
-    height:1500px;
     border:0;
 }
 #wrap {
-    position:relative;
-    width:1280px; /* wrap에 속한 div의 넓이+margin값을 더한 넓이와 높이값 */
-    height:1280px;
-    top:50%;
-    left:50%;
-    transform: translate(-50%, -50%); /* 중앙정렬 */
+	display: grid;
+	grid-template-columns: repeat(2, 50%);
+    position: relative;
+    width: fit-content; /* wrap에 속한 div의 넓이+margin값을 더한 넓이와 높이값 */
+    height: 100%;
+    margin: auto;
 }
+#wrap > div > a > img {
+	display: block;
+	max-width: 100%;
+	width: auto;
+	height: 100%;
+}
+
 #wrap > div {
-    width:600px;
-    height:600px;
-    border:0;
-    float:left;
-    margin: 15px;
-    box-sizing:border-box; /* border 또한 위치값을 갖기에 div크기가 더 커짐을 방지하기 위한 */
-}
-#wrap > div:nth-child(3) {
-    clear:both; /* float:left 의 줄바꿈을 위한 */
+	margin: 3px;
 }

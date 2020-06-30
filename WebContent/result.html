@@ -1,28 +1,50 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
-<title>WORKOUT</title>
+<title>RESULT</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 <link rel="stylesheet" href="assets\css\main.css" />
 </head>
-<body>
+<body class="is-preload">
+	<!-- Wrapper -->
+	<div id="wrapper">
+		<!-- Header -->
+		<header id="header">
+			<div class="content">
+				<div class="inner">
+					<h1>Ïö¥Îèô Í≤∞Í≥º</h1>
+					
+					<table border="1" style="margin:10 auto;">
+				      	<tr>
+				       		<th>Ïù¥  Î¶Ñ</th>
+				       		<td id="name"></td>
+				      	</tr>
+				      	<tr>
+				       		<th>Í≤ΩÍ≥ºÏãúÍ∞Ñ</th>
+				       		<td id="elapsed"></td>
+				      	</tr>
+				      	<tr>
+				       		<th>Í∏∞  Î°ù</th>
+				       		<td id="count"></td>
+				      	</tr>
+				   	</table>
+				   	<input type="button" value="return" onclick="backToMain()">
+		   		</div>
+		   	</div>
+		</header>
+		<!-- Footer -->
+		<footer id="footer">
+			<p class="copyright"> KNU WebProgramming 6Team </p>
+		</footer>
+	</div>
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
 	<script src="cookie.js"></script>
-	<h1>øÓµø ∞·∞˙</h1>
-	
-	<table border="1" style="margin:0 auto;">
-      	<tr>
-       		<th>¿Ã  ∏ß</th>
-       		<td id="name"></td>
-      	</tr>
-      	<tr>
-       		<th>∞Ê∞˙Ω√∞£</th>
-       		<td id="elapsed"></td>
-      	</tr>
-      	<tr>
-       		<th>±‚  ∑œ</th>
-       		<td id="count"></td>
-      	</tr>
-   	</table>
 	<script>
 		var startTime = getCookie("startTime");
 		var endTime = getCookie("endTime");
@@ -35,12 +57,17 @@
 		
 		function parseMilisec(ms) {
 			var sec = (ms/1000).toFixed(0);
-			var str = (sec%60)+"√ ";
+			var str = (sec%60)+"Ï¥à";
 			var min = (sec/60).toFixed(0);
-			if (min > 0) str = (min%60) + "∫– " + str;
+			if (min > 0) str = (min%60) + "Î∂Ñ " + str;
 			var hour = (min/60).toFixed(0);
-			if (hour > 0) str = hour + "Ω√∞£ " + str;
+			if (hour > 0) str = hour + "ÏãúÍ∞Ñ " + str;
 			return str;
+		}
+		
+		function backToMain() {
+			resetCookie();
+			location.href = "index.html";
 		}
 	</script>
 </body>

@@ -1,47 +1,134 @@
 <!doctype html>
 <html>
-	<head>
-		<title>운동목록</title>
-		<link rel="stylesheet" href="assets\css\main.css" />
-		<link rel="stylesheet" href="assets\css\list.css" />
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-		
-    	<style>
-    	</style>
-	</head>
-<body>
-
-
-<div id = "wrapper">
-<div>
-
-
-<div id="box">
-    <div id="wrap">
-        <div> <a href="list_pushup.html"><img src="images/push_up.jpg"></a></div>
-        <div> <a href="list_lunge.html"><img src="images/sit_up.jpg"></a></div>
-        <div> <a href="list_flank.html"><img src="images/flank2.jpg"></a></div>
-        <div> <a href="list_squat.html"><img src="images/squat.jpg"></a></div>
-    </div>
-</div>
-
- </div>
-    <footer id="footer">
-						<p class="copyright"> KNU WebProgramming 9Team </p>
-					</footer>
-					
-					</div>
-
-		<!-- BG -->
-			<div id="bg"></div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
- </body>
+<head>
+	<title>WORKOUT</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets\css\main.css" />
+	<link rel="stylesheet" href="assets\css\list.css" />
+	<link rel="stylesheet" href="assets\css\noscript.css" />
+</head>
+<body class="is-preload">
+	<!-- Wrapper -->
+	<div id = "wrapper">
+	    <header id="footer">
+			<div id="wrap">
+		        <div> <a href="#pushup"><img class="image" src="images/push_up.jpg"/></a></div>
+		        <div> <a href="#lunge"><img class="image" src="images/sit_up.jpg"/></a></div>
+		        <div> <a href="#flank"><img class="image" src="images/flank2.jpg"/></a></div>
+		        <div> <a href="#squat"><img class="image" src="images/squat.jpg"/></a></div>
+	        </div>
+		</header>
+		<!-- Main -->
+		<div id="main">
+			<article id="pushup">
+				<h2 class="major">Pushup</h2>
+				<div style="text-align:center; font-size:15px; width:100%;">
+					<table border="1" style="margin:0 auto;">
+						<thead>
+			        	<tr>
+			          		<td><iframe width="100%" height="550px" src="https://www.youtube.com/embed/KEFQyLkDYtI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></td>
+			        	</tr>
+			      		</thead>
+			      		<tbody>
+			        	<tr>
+			          		<td>
+			          			<p><p>어깨에서 발끝까지 일직선을 이루도록 몸을 고정한후 팔꿈치를 굽혔다 펴는 동작으로, 가장 널리 알려진 상체 운동이다.
+			          			<p>대흉근, 상완삼두근, 삼각근 발달에 도움을 준다.	
+			          		</td>
+			        	</tr>
+			        	<tr>
+			        		<td><input type = "button" value="시작하기" onclick="start('pushUP_Counter.html')"></td>
+			      		</tbody>
+			    	</table>
+			    </div>
+			</article>
+			<article id="lunge">
+				<h2 class="major">Lunge</h2>
+				<div style="text-align:center; font-size:15px; width:100%;">
+					<table border="1" style="margin:0 auto;">
+						<thead>
+			        	<tr>
+			          		<td><iframe width="100%" height="550px" src="https://flowplayer.com/e/?t=Decline%20Sit%20Up%3A%20Video%20Exercise%20Guide%20%26amp%3B%20Tips&c=eyJkZWJ1ZyI6ZmFsc2UsImRpc2FibGVkIjpmYWxzZSwiZnVsbHNjcmVlbiI6dHJ1ZSwia2V5Ym9hcmQiOnRydWUsInJhdGlvIjowLjU2MjUsImFkYXB0aXZlUmF0aW8iOnRydWUsInJ0bXAiOjAsInByb3h5IjoiYmVzdCIsImhsc1F1YWxpdGllcyI6dHJ1ZSwic2Vla1N0ZXAiOmZhbHNlLCJzcGxhc2giOmZhbHNlLCJsaXZlIjpmYWxzZSwibGl2ZVBvc2l0aW9uT2Zmc2V0IjoxMjAsInN3ZiI6Ii8vcmVsZWFzZXMuZmxvd3BsYXllci5vcmcvNy4yLjcvY29tbWVyY2lhbC9mbG93cGxheWVyLnN3ZiIsInN3ZkhscyI6Ii8vcmVsZWFzZXMuZmxvd3BsYXllci5vcmcvNy4yLjcvY29tbWVyY2lhbC9mbG93cGxheWVyaGxzLnN3ZiIsInNwZWVkcyI6WzAuMjUsMC41LDEsMS41LDJdLCJ0b29sdGlwIjp0cnVlLCJtb3VzZW91dFRpbWVvdXQiOjUwMDAsIm11dGVkQXV0b3BsYXkiOnRydWUsImNsaWNrVG9Vbk11dGUiOnRydWUsInZvbHVtZSI6MSwiZXJyb3JzIjpbIiIsIlZpZGVvIGxvYWRpbmcgYWJvcnRlZCIsIk5ldHdvcmsgZXJyb3IiLCJWaWRlbyBub3QgcHJvcGVybHkgZW5jb2RlZCIsIlZpZGVvIGZpbGUgbm90IGZvdW5kIiwiVW5zdXBwb3J0ZWQgdmlkZW8iLCJTa2luIG5vdCBmb3VuZCIsIlNXRiBmaWxlIG5vdCBmb3VuZCIsIlN1YnRpdGxlcyBub3QgZm91bmQiLCJJbnZhbGlkIFJUTVAgVVJMIiwiVW5zdXBwb3J0ZWQgdmlkZW8gZm9ybWF0LiBUcnkgaW5zdGFsbGluZyBBZG9iZSBGbGFzaC4iXSwiZXJyb3JVcmxzIjpbIiIsIiIsIiIsIiIsIiIsIiIsIiIsIiIsIiIsIiIsImh0dHA6Ly9nZXQuYWRvYmUuY29tL2ZsYXNocGxheWVyLyJdLCJwbGF5bGlzdCI6W10sImhsc0ZpeCI6ZmFsc2UsImRpc2FibGVJbmxpbmUiOmZhbHNlLCJrZXkiOiIkNjU2NDE5MjIxNzE2OTcyIiwicG9zdGVyIjoiLy9jZG4ubXVzY2xlYW5kc3RyZW5ndGguY29tL3ZpZGVvL2RlY2xpbmVzaXR1cC5qcGciLCJjbGlwIjp7InN1YnRpdGxlcyI6W10sInNvdXJjZXMiOlt7InNyYyI6Imh0dHBzOi8vY2RuLm11c2NsZWFuZHN0cmVuZ3RoLmNvbS92aWRlby9kZWNsaW5lc2l0dXAubXA0Iiwic3VmZml4IjoibXA0IiwidHlwZSI6InZpZGVvL21wNCJ9XX0sImhvc3RuYW1lIjoid3d3Lm11c2NsZWFuZHN0cmVuZ3RoLmNvbSIsIm9yaWdpbiI6Imh0dHBzOi8vd3d3Lm11c2NsZWFuZHN0cmVuZ3RoLmNvbS9leGVyY2lzZXMvZGVjbGluZS1zaXR1cC5odG1sIiwianMiOltdLCJjc3MiOltdfQ%3D%3D&r=https%3A%2F%2Fwww.muscleandstrength.com%2Fexercises%2Fdecline-situp.html" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></td>
+			        	</tr>
+			      		</thead>
+			      		<tbody>
+			        	<tr>
+			          		<td>
+			          			<p><p>누운 상태에서 다리를 고정시키고 상체를 일으키는 동작으로, 가장 일반적으로 할 수 있는 복근 운동이다.
+			          			<p>복근과 다리 근육 발달에 도움을 준다.   			 			
+			          		</td>
+			        	</tr>
+			        	<tr>
+			        		<td><input type = "button" value="시작하기" onclick="start('lunge_Counter.html')"></td>
+			      		</tbody>
+			    	</table>
+			    </div>
+			</article>
+			<article id="flank">
+				<h2 class="major">Flank</h2>
+				<div style="text-align:center; font-size:15px; width:100%;">
+					<table border="1" style="margin:0 auto;">
+						<thead>
+			        	<tr>
+			          		<td><iframe width="100%" height="550px" src="https://www.youtube.com/embed/9Wd3xH6-QYw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></td>
+			        	</tr>
+			      		</thead>
+			      		<tbody>
+			        	<tr>
+			          		<td>
+			          			<p><p>엎드린 상태에서 몸을 어깨부터 발목까지 일직선으로 유지하고 엉덩이를 반복적으로 들어올리는 동작이다.
+			          			<p>몸의 중심에 해당하는 근육인 코어 강화에 도움을 준다. 			
+			          		</td>
+			        	</tr>
+			        	<tr>
+			        		<td><input type = "button" value="시작하기" onclick="start('flank_Counter.html')"></td>
+			      		</tbody>
+			    	</table>
+			    </div>
+			</article>
+			<article id="squat">
+				<h2 class="major">Squat</h2>
+				<div style="text-align:center; font-size:15px; width:100%;">
+					<table border="1" style="margin:0 auto;">
+						<thead>
+			        	<tr>
+			          		<td><iframe width="100%" height="550px" src="https://www.youtube.com/embed/R2dMsNhN3DE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></td>
+			        	</tr>
+			      		</thead>
+			      		<tbody>
+				        	<tr>
+				          		<td>
+				          			<p><p>허벅지가 무릎과 수평이 될 때까지 앉았다 섰다 하는 동작으로, 가장 기본적인 하체 운동이다.
+				          			<p>대퇴사두근, 대둔근, 슬굴곡근 발달에 도움을 준다.   			 			
+				          		</td>
+				        	</tr>
+			        	<tr>
+			        		<td><input type = "button" value="시작하기" onclick="start('squat_Counter.html')"></td>
+			      		</tbody>
+			    	</table>
+			    </div>
+			</article>
+		</div>
+		<!-- Footer -->
+	    <footer id="footer">
+			<p class="copyright"> KNU WebProgramming 9Team </p>
+		</footer>
+	</div>
+	<!-- BG -->
+	<div id="bg"></div>
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+	<script src="cookie.js"></script>
+	<script>
+		function start(link) {
+			setCookie("startTime", (new Date()).getTime(), 6);
+			location.href=link;
+		}
+	</script>
+</body>
 </html>
