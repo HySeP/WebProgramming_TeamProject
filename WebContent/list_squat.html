@@ -32,7 +32,7 @@
           		</td>
         	</tr>
         	<tr>
-        		<td><input type = "button" value="시작하기" onclick="location.href='squat_Counter.html'"></td>
+        		<td><input type = "button" value="시작하기" onclick="start()"></td>
       		</tbody>
     	</table>
     </div> 
@@ -40,6 +40,13 @@
         <footer id="footer">
 						<p class="copyright"> KNU WebProgramming 9Team </p>
 					</footer>
+	<script src="cookie.js"></script>
+	<script>
+		function start() {
+			setCookie("startTime", (new Date()).getTime(), 6);
+			location.href='squat_Counter.html';
+		}
+	</script>
 					
 </body>
 </html>

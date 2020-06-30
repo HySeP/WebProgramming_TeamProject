@@ -101,22 +101,12 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-		
+			<script src="cookie.js"></script>
 <script>
-		function SetCookie( strName, iSecond )
-		{
-			var strCookie = strName;
-			if( typeof iSecond === "number" )
-			{
-				strCookie += "; max-age=" + iSecond;
-			}
-			document.cookie = strCookie;
-		}
-
 		function AddCookie()
 		{
 			var strName = document.getElementById("username" ).value;
-			SetCookie( strName, null );
+			setCookie("name", strName, 6);
 			location.href="list_table.html";
 		}
 </script>
