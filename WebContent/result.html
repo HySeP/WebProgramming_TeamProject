@@ -24,14 +24,25 @@
       	</tr>
    	</table>
 	<script>
+		alert(document.cookie);
 		var startTime = getCookie("startTime");
-		var currTime = new Date();
+		var endTime = getCookie("endTime");
 		var elapsedms = 0;
-		if (startTime != undefined)
-			currTime.getTime()-startTime.getTime();
+		if (startTime != undefined && endTime != undefined)
+			elapsedms = endTime-startTime;
 		document.getElementById("name").innerHTML = getCookie("username");
-		document.getElementById("elapsed").innerHTML = (elapsedms*0.001)+"초";
+		document.getElementById("elapsed").innerHTML = parseMilisec(elapsedms);
 		document.getElementById("count").innerHTML = getCookie("count");
+		
+		function parseMilisec(ms) {
+			var sec = (ms/1000).toFixed(0);
+			var str = (sec%60)+"초";
+			var min = (sec/60).toFixed(0);
+			if (min > 0) str = (min%60) + "분 " + str;
+			var hour = (min/60).toFixed(0);
+			if (hour > 0) str = hour + "시간 " + str;
+			return str;
+		}
 	</script>
 </body>
 </html>

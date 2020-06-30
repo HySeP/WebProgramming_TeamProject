@@ -120,6 +120,7 @@
         
         function sendCount () {
         	setCookie("count", count, 6);
+			setCookie("endTime", (new Date()).getTime(), 6);
         	location.href = "result.html";
         }
 
